@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cosmotics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url("background image.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        header {
+            text-align: center;
+            background-color: rgb(247, 233, 233);
+        }
+
+        .fa-circle-user {
+            margin-right: 35px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .fa-bell {
+            margin-right: 140px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            border-radius: 2px;
+            color: black;
+            margin-top: 20px;
+            height: 28px;
+            border: 1px solid rgb(71, 69, 69);
+            box-shadow: inset 1px 5px 10px rgb(128, 117, 117);
+        }
+
+        .header-button {
+            margin-left: -10px;
+            width: 45px;
+            height: 28px;
+            padding-bottom: 0px;
+            border: 1px solid rgb(71, 69, 69);
+            border-radius: 2px;
+            background-color: white;
+            margin-right: 300px;
+            box-shadow: inset 1px 5px 10px rgb(128, 117, 117);
+        }
+
+        .header-icons {
+            text-align: right;
+        }
+
+        .nav-header {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+
+        }
+
+        .nav-1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-2 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-3 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-4 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-1:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .nav-2:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .nav-3:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .nav-4:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #div-1-gold {
+            background-color: rgb(214, 177, 177);
+            padding: 10px;
+            padding-left: 22px;
+            width: 450px;
+            height: 290px;
+            border-radius: 5px;
+        }
+
+        #div-1-gold:hover {
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        #div-2-gold {
+            background-color: rgb(233, 203, 203);
+            padding: 10px;
+            padding-left: 22px;
+            width: 450px;
+            height: 290px;
+            border-radius: 5px;
+        }
+
+        #div-2-gold:hover {
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        #div-3-gold {
+            background-color: rgb(214, 177, 177);
+            padding: 10px;
+            padding-left: 22px;
+            width: 450px;
+            height: 290px;
+            border-radius: 5px;
+        }
+
+        #div-3-gold:hover {
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .img-1 {
+            margin-top: 20px;
+            display: block;
+            border-radius: 5px;
+        }
+
+        #continer1 {
+            display: flex;
+            gap: 10px;
+            margin: 40px;
+            z-index: 5;
+        }
+
+        #ancer-1-150k {
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding: 5px;
+            width: fit-content;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        #ancer-1-150k:hover {
+            background-color: rgb(90, 243, 90);
+            box-shadow: 8px 5px 8px green;
+        }
+
+
+        #slide-images {
+            height: 100%;
+            background-color: aliceblue;
+            margin: 30px;
+            border-radius: 10px;
+            margin-top: 100px;
+        }
+
+        #imgflot {
+            float: left;
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .par {
+            color: black;
+            margin: 20px;
+        }
+
+        #continer-slide-images {
+            width: 90%;
+            height: 550px;
+            background-color: rgb(236, 188, 188);
+            border-radius: 8px;
+
+            margin: 50px;
+
+
+        }
+
+        #carouselExampleDark {
+            margin: 3px;
+            width: 100%;
+            height: 520px;
+            padding: 30px;
+        }
+
+        #continer-slide-images:hover {
+            box-shadow: 10px 5px 20px gray;
+
+        }
+
+        .carousel-indicators {
+            margin: 30px;
+        }
+
+        #human_hair-continer {
+            background-color: rgb(201, 199, 199);
+            margin: 30px;
+            border-radius: 8px;
+        }
+
+        #human_hair-h1 {
+            color: orange;
+            text-align: center;
+        }
+
+        #human_hair-h1:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #humann-hair-img {
+            float: right;
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        #human-hair_par {
+            margin: 20px;
+        }
+
+        #human_haires-slide-image_div {
+            background-color: rgb(201, 199, 199);
+            margin: 100px;
+            border-radius: 8px;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+
+        .carousel-inner {
+            border-radius: 10px;
+        }
+
+        .footer-par {
+            display: inline-block;
+            color: white;
+        }
+
+        .footer {
+            background-color: black;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        #footer1-dives {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #footer1 {
+            display: block;
+        }
+
+        #footer-icons {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        #contact {
+            color: white;
+            text-decoration: none;
+        }
+
+        #contact:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+
+
+        .fa-facebook {
+            color: #1873EB;
+            font-size: 25px;
+        }
+        
+
+        .fa-tiktok {
+            color: white;
+            font-size: 25px;
+        }
+
+        .fa-square-instagram {
+            color: #f718bf;
+            font-size: 25px;
+        }
+
+        .fa-square-whatsapp {
+            color: #31D24E;
+            font-size: 25px;
+        }
+
+        .fa-linkedin {
+            color: #0C61BF;
+            font-size: 25px;
+        }
+
+        .fa-location-dot {
+            color: #E41B23;
+            font-size: 20px;
+        }
+
+        #footer2 a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        #footer2 a:hover {
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+        }
+
+        #continer_body-product {
+            margin: 30px;
+            border-radius: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Natu Nati</h1>
+        <h2>Wellcome to Cosmotics</h2>
+        <div class="header-icons">
+            <input class="search-bar" type="search" placeholder="Search...">
+            <button class="header-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <nav class="nav-header">
+            <ul><a href="to-tray.html" class="nav-1">New prodact</a></ul>
+            <ul><a href="#kk" class="nav-2">Face prodact</a></ul>
+            <ul><a href="" class="nav-3">Body prodact</a></ul>
+            <ul><a href="#human_hair-continer_big" class="nav-4">Human hairs</a></ul>
+        </nav>
+
+        <hr>
+    </header>
+    <div id="continer1">
+        <div id="div-1-gold"><img class="img-1" src="./gold.jpg" width="400" height="200"><a id="ancer-1-150k">150k</a>
+        </div>
+        <div id="div-2-gold"><img class="img-1" src="./image 1.avif" width="400" height="200"><a
+                id="ancer-1-150k">250k</a></div>
+        <div id="div-3-gold"><img class="img-1" src="./image dax.jpeg" width="400" height="200"><a
+                id="ancer-1-150k">150k</a></div>
+    </div>
+
+
+
+    <div id="slide-images">
+        <img id="imgflot" src="./perfumes.jpeg">
+        <p class="par">
+            A paragraph is a distinct unit of writing, composed of one or more sentences, that focuses on a single idea
+            or topic. It's a way to organize and structure written work, making it easier for readers to follow the
+            author's train of thought. Paragraphs are fundamental to clear and effective communication in most forms of
+            writing.
+            Paragraph cartier Writing for
+            Here's a more detailed explanation:
+            Structure:
+            A typical paragraph contains a topic sentence, which introduces the main idea, supporting sentences that
+            elaborate on the topic, and sometimes a concluding sentence that summarizes or transitions to the next
+            paragraph.
+            Purpose:
+            Paragraphs help break down complex information into digestible chunks, making it easier for readers to
+            understand and follow the writer's line of reasoning.
+            Unity and Coherence:
+            Each paragraph should focus on a single, unified idea. Sentences within a paragraph should relate to the
+            topic sentence and each other, creating a cohesive and understandable unit.
+            Length:
+            While there's no strict rule for paragraph length, they generally consist of several sentences and can vary
+            in length depending on the complexity of the idea being discussed.
+            Types:
+            Paragraphs can be used for various purposes, including description, narration, comparison/contrast, and
+            argumentation.
+            Paragraphs - The Writing Center
+            Description: Provide specific details about what something looks, smells, tastes, sounds, or feels like.
+            Organize spatially, in or...
+
+            The Writing Center
+
+            Writing Skills: The Paragraph - YouTube
+            22 Jul 2013 — The paragraph is the most important unit of a well-written essay. The paragraph has a specific
+            structure and standards ...
+
+
+            YouTube ·
+            Adam’s English Lessons · engVid
+
+            Paragraphs - University of Toronto - Writing Advice
+            What is a paragraph? A paragraph is a series of related sentences developing a central idea, called the
+            topic. Try to think about ...
+
+            University of Toronto - Writing Advice
+
+            Show all
+            AI responses may include mistakes. Learn more
+        </p>
+
+    </div>
+
+
+
+    <div id="continer-slide-images">
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./gold.jpg" class="d-block w-100" alt="..." width="" height="500"
+                        style="border-radius: 10px;">
+                    <div class="carousel-caption d-none d-md-block" style="color: white;">
+                        <h5>First slide label</h5>
+                        <p>You slide it.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./image fog.jpeg" class="d-block w-100" alt="..." width="" height="500"
+                        style="border-radius: 10px;">
+                    <div class="carousel-caption d-none d-md-block" style="color: white;">
+                        <h5>Second slide label</h5>
+                        <p>You slide it.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./image 1.avif" class="d-block w-100" alt="..." width="" height="500"
+                        style="border-radius: 10px;">
+                    <div class="carousel-caption d-none d-md-block" style="color: white;">
+                        <h5>Third slide label</h5>
+                        <p>You slide it.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+
+        </div>
+    </div>
+
+    <div id="human_hair-continer_big">
+        <h1 id="human_hair-h1">HUMAN HAIRS</h1>
+        <div id="human_hair-continer">
+            <img id="humann-hair-img" src="./human hairs.webp">
+            <div id="human-hair_par">
+                Human hair is an extraordinary biological feature that not only serves practical purposes but also plays
+                a vital role in personal
+                expression and cultural identity. Composed of keratin and growing from follicles embedded in the skin,
+                hair serves as a protective
+                layer—insulating the scalp against harsh temperatures and acting as a barrier against UV radiation. It
+                grows in cycles of anagen (growth),
+                catagen (transitional), and telogen (rest), with individual strands undergoing these phases at different
+                times. Across the globe, hair is deeply symbolic:
+                from ancient rituals involving the shaving or braiding of hair to modern fashion statements that utilize
+                bold colors, edgy cuts, and intricate styles.
+                The texture, thickness, and color of hair can be influenced by genetics, hormonal changes, and
+                environmental factors, making every individual’s hair as unique as a fingerprint.
+                More than just threads sprouting from the skin, human hair is woven into the fabric of identity—allowing
+                us to tell stories, preserve traditions, challenge norms,
+                and creatively reinvent ourselves at will. In every twist, coil, strand, and shimmer, there’s history,
+                science, and self-expression coexisting atop our heads........
+                Human hair is an extraordinary and multifaceted biological feature that plays both functional and
+                symbolic roles in human life, echoing across cultures, identities, and historical timelines.
+                Structurally, hair is composed of a protein called keratin, produced in follicles that lie beneath the
+                skin’s surface, and each strand goes through
+                a life cycle of growth, rest, and shedding—cycles that are orchestrated by complex hormonal and genetic
+                factors. Though it may seem simple at first glance, hair performs key physiological roles,
+                acting as insulation to retain body heat, shielding the scalp from ultraviolet radiation, and even
+                serving as a sensory tool due to the nerves connected to its follicles. Beyond biology,
+                the cultural significance of hair is profound and deeply rooted, often representing ideals of beauty,
+                strength, spirituality, rebellion, or tradition. In many societies, hairstyles can indicate age, marital
+                status, social class,
+                or religious affiliation. Throughout history, hair has been manipulated and styled with incredible
+                creativity—braided with beads in African traditions, powdered in extravagant European courts, or left in
+                natural curls in modern
+                expressions of self-love and authenticity. Hair is also a canvas of identity and transformation: people
+                shave it in solidarity, dye it in protest, and alter it to reflect inner changes. Its versatility allows
+                it to shift with
+                fashion, mood, and life stage, becoming a silent storyteller that we carry with us. Even in science and
+                forensics, hair offers clues about nutrition, genetics, and personal habits. Yet despite its apparent
+                resilience, hair is sensitive to stress, environment, and
+                health, revealing aspects of the body’s inner workings before we consciously notice. Whether celebrated
+                in poetry, scrutinized in salons, or honored in sacred rituals, human hair continues to fascinate and
+                evolve with every generation, making it one of the most personal yet
+                universal features of the human experience.
+            </div>
+        </div>
+        <div id="human_haires-slide-image_div">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./human hairs2.webp" class="d-block w-100" alt="..." height="600">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./human hair3.webp" class="d-block w-100" alt="..." height="600">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./muman hair 1.webp" class="d-block w-100" alt="..." height="600">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="continer_body-product">
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./nail color.jpg" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is a nail colour.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./perfumes.jpeg" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is perfume.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./72 h-lotion.webp" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is a lotion.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./body soap.jpg" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is a body soap.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./body lotion2.webp" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is body lotion .</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./skin lotion.webp" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is a skin lotion.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./alovera b-wash.avif" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is gel.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./images body pro.jpeg" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is a body product.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"><img id="" src="./black  hina.webp" width="400" height="300"
+                                style="border-radius: 5px 5px 0 0;">
+                            <div class="card-body">
+                                <p class="card-text">This is black hina.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">View</button> <button type="button"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            style="cursor: pointer;">Shope</button> </div> <small
+                                        class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script>
+        const div1gold = document.querySelector("#div-1-gold");
+        const ancer150k = document.querySelector("#ancer-150k");
+        const searchButton = document.querySelector(".header-button");
+        const hairp=document.querySelector("#human_hair-continer_big");
+        const nailcolour=document.querySelector("#continer_body-product");
+        const slaidImages=document.querySelector("#continer-slide-images");
+
+//         btn.addEventListener("click", function () {
+//     const inp = document.querySelector(".search-bar").value;
+//     if (inp.includes("hair")) {
+//         hairp.scrollIntoView({ behavior: "smooth" });
+//     } else {
+//         alert("Specify what you want plz");
+//     }
+// });
+       
+
+
+// searchButton.addEventListener("click", function () {
+//     const inp = document.querySelector(".search-bar").value;
+//     if (inp.includes("hair")) {
+//         hairp.scrollIntoView({ behavior: "smooth" });
+//     }else if(inp.includes("nail colour")||inp.includes("lotion")||inp.includes("black hina")){
+//         nailcolour.scrollIntoView({behavior: "smooth"});
+       
+//     }else if(inp.includes("gold")||inp.includes("lipstick")){
+//          slaidImages.scrollIntoView({behavior:"smooth"});
+//     }
+//     else {
+//         alert("Specify what you want plz");
+//     }
+// });
+
+// // Run search on button click
+// searchButton.addEventListener("click", handleSearch);
+
+// Run search on Enter key in search bar
+document.querySelector(".search-bar").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        const inp=document.querySelector(".search-bar").value;
+        if(inp.includes("hair")){
+            hairp.scrollIntoView({behavior: "smooth"});
+        }else if(inp.includes("nail colour")){
+            nailcolour.scrollIntoView({behavior:"smooth"})
+        }
+        // handleSearch();
+    }
+});
+       
+
+    </script>
+</body>
+
+<footer class="footer">
+    <p class="footer-par">@ cpoy right natu 2025!</p>
+    <div id="footer1-dives">
+        <div id="footer1">
+            <a href="#" id="contact">Contact Us</a>
+            <div id="footer-icons">
+                <a href="https://www.facebook.com/zemenna.eyu.mezenay"><i class="fa-brands fa-facebook"></i></a>
+                <a
+                    href="https://www.tiktok.com/@myking678887?_r=1&_d=e5ai5elbdig0be&sec_uid=MS4wLjABAAAAH-zVeBGyxljlKV9wuoO_Fk-_H92ey7zy96vMcwHGESIhkCGd0hZvl3g4lWCYZ7l5&share_author_id=7184776893370631173&sharer_language=en&source=h5_m&u_code=e5je66khmlcgdg&timestamp=1753116274&user_id=7184776893370631173&sec_user_id=MS4wLjABAAAAH-zVeBGyxljlKV9wuoO_Fk-_H92ey7zy96vMcwHGESIhkCGd0hZvl3g4lWCYZ7l5&utm_source=more&utm_campaign=client_share&utm_medium=android&share_iid=7527452246323775288&share_link_id=3e758040-931b-4b2c-8300-757f77a95379&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/natila____?utm_source=qr&igsh=c2lhaHpqajN3eGh2"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a href="https:wa.me/message/KOXME7LEVX57P1"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+
+        </div>
+        <div id="footer2">
+            <a href="https://www.google.com/maps/place/Joys+Bakery/@0.2835348,32.6098343,731m/data=!3m2!1e3!4b1!4m6!3m5!1s0x177dbd869656f059:0xf06ddeeca806456!8m2!3d0.2835294!4d32.6124092!16s%2Fg%2F11fgktc9m4!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+                id="location">Location</a>
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+</html>
